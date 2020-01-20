@@ -1,0 +1,58 @@
+<div class="header">
+  <div class="header__stream">
+    <ng-container *ngIf="!musicPlay; else musicStop">
+      <mat-icon
+        (click)="musicStatus()"
+        class="stream__button">
+        play_circle_fill
+      </mat-icon>
+      <p class="stream__text">
+        <ng-container>
+          Play Music
+        </ng-container>
+      </p>
+    </ng-container>
+    <ng-template #musicStop>
+      <mat-icon
+        (click)="musicStatus()"
+        class="stream__button">
+        pause_circle_fill
+      </mat-icon>
+      <p class="stream__text">
+        <ng-container>
+          Stop Music
+        </ng-container>
+      </p>
+    </ng-template>
+  </div>
+
+  <div class="nav">
+    <a mat-button>Main</a>
+    <button mat-button [matMenuTriggerFor]="news" [appMouse]="news"  >News</button>
+    <mat-menu #news="matMenu">
+      <a mat-menu-item>Item 1</a>
+      <a mat-menu-item>Item 2</a>
+      <a mat-menu-item>Item 2</a>
+      <a mat-menu-item>Item 2</a>
+      <a mat-menu-item>Item 2</a>
+    </mat-menu>
+
+    <a mat-button>Project</a>
+
+    <a mat-button>Photo</a>
+    <a mat-button>About</a>
+    <a mat-button>Team</a>
+    <a mat-button>Contacts</a>
+  </div>
+
+  <mat-form-field class="language">
+    <mat-label>Choose language</mat-label>
+    <mat-select [(ngModel)]="selectedUa">
+      <mat-option *ngFor="let lang of language" [value]="lang">
+        {{lang}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+</div>
+

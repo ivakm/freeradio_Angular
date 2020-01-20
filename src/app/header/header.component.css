@@ -1,0 +1,55 @@
+.header {
+  align-items: center;
+  background-color: rgb(255, 255, 25);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header__stream {
+  background: rgb(0, 0, 0);
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  height: 60px;
+  position: relative;
+  width: 200px;
+}
+
+.stream__button {
+  margin-right: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translate(20px,-50%);
+}
+
+.stream__button:hover{
+  cursor: pointer;
+}
+
+.stream__text {
+  display: inline;
+  position: absolute;
+  top: 50%;
+  transform: translate(70px,-50%);
+}
+
+.nav {
+  padding: 35px;
+}
+
+.nav button {
+  margin: 0 5px;
+  outline: none;
+}
+
+.drop__news--hide {
+  display: none;
+}
+
+.drop__news--show {
+  display: block;
+}
+.language {
+  width: 100px;
+}
