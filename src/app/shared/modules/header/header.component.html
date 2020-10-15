@@ -1,34 +1,30 @@
 <div class="header">
   <div class="header__stream">
-    <ng-container *ngIf="!musicPlay; else musicStop">
+    <div *ngIf="!musicPlay; else musicStop">
       <mat-icon
         (click)="musicStatus()"
         class="stream__button">
         play_circle_fill
       </mat-icon>
       <p class="stream__text">
-        <ng-container>
-          Play Music
-        </ng-container>
+        Play Music
       </p>
-    </ng-container>
+    </div>
     <ng-template #musicStop>
       <mat-icon
         (click)="musicStatus()"
         class="stream__button">
-        pause_circle_fill
+        pause
       </mat-icon>
       <p class="stream__text">
-        <ng-container>
-          Stop Music
-        </ng-container>
+        Stop Music
       </p>
     </ng-template>
   </div>
 
   <div class="nav">
     <a mat-button>Main</a>
-    <button mat-button [matMenuTriggerFor]="news" [appMouse]="news"  >News</button>
+    <button mat-button [matMenuTriggerFor]="news">News</button>
     <mat-menu #news="matMenu">
       <a mat-menu-item>Item 1</a>
       <a mat-menu-item>Item 2</a>

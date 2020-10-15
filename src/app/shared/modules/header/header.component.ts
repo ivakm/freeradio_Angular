@@ -1,15 +1,15 @@
-import {Component, OnInit, ViewChild, AfterViewInit , HostListener} from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  musicPlay: boolean = false;
+  musicPlay = false;
   language = ['ru', 'ua'];
   dropNewsMenu = false;
-  selectedUa: string = 'ua';
+  selectedUa = 'ua';
 
   constructor() {}
 
