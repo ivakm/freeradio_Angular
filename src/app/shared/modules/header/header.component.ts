@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,17 +8,10 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 export class HeaderComponent implements OnInit {
   musicPlay = false;
   language = ['ru', 'ua'];
-  dropNewsMenu = false;
-  selectedUa = 'ua';
 
   constructor() {}
 
-@ViewChild('testButton', {static: true}) menu;
   ngOnInit() {}
-
- /* ngAfterViewInit(){
-    this.menu.openMenu();
-  }*/
 
   musicStatus() {
     this.musicPlay = !this.musicPlay;

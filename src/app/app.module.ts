@@ -16,13 +16,17 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import {FormsModule} from '@angular/forms';
 import {NgxAudioPlayerModule} from 'ngx-audio-player';
+import { NewsComponent } from './page/news/news.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco/transloco-root.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MainComponent
+    MainComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import {NgxAudioPlayerModule} from 'ngx-audio-player';
     MatMenuModule,
     MatSelectModule,
     FormsModule,
-    NgxAudioPlayerModule
+    NgxAudioPlayerModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [],
   bootstrap: [AppComponent]
