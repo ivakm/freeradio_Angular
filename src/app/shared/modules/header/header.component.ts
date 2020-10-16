@@ -8,13 +8,13 @@ import {TranslocoService} from '@ngneat/transloco';
 })
 export class HeaderComponent implements OnInit {
   musicPlay = false;
-  language: string[] | {id: string, label: string}[];
+  languages: string[] | {id: string, label: string}[];
   activeLang: string;
 
   constructor(private translateService: TranslocoService) { }
 
   ngOnInit() {
-    this.language = this.translateService.getAvailableLangs();
+    this.languages = this.translateService.getAvailableLangs();
     this.activeLang = this.translateService.getActiveLang();
   }
 

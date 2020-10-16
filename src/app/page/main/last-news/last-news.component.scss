@@ -1,0 +1,18 @@
+.news__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.news__text {
+  color: #000000;
+
+  &:hover {
+    color: red;
+    text-decoration: none;
+  }
+}
+
+.news__date {
+  align-self: flex-end;
+  font-size: 12px;
+}

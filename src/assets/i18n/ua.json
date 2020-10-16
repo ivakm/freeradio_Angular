@@ -8,5 +8,8 @@
     "team": "Команда",
     "contacts": "Контакти"
   },
-  "language": "Мова"
+  "language": "Мова",
+  "lastMenu": {
+    "header": "Останні новини"
+  }
 }

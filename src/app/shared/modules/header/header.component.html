@@ -40,7 +40,7 @@
   <mat-form-field class="language" appearance="fill">
     <mat-label>{{'language' | transloco}}</mat-label>
     <mat-select [value]="activeLang" (valueChange)="changeLangs($event)">
-      <mat-option *ngFor="let lang of language" [value]="lang">
+      <mat-option *ngFor="let lang of languages" [value]="lang">
         {{lang}}
       </mat-option>
     </mat-select>

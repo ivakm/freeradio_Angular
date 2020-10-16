@@ -19,6 +19,8 @@ import {NgxAudioPlayerModule} from 'ngx-audio-player';
 import {NewsComponent} from './page/news/news.component';
 import {HttpClientModule} from '@angular/common/http';
 import {TranslocoRootModule} from './transloco/transloco-root.module';
+import { PopularNewsComponent } from './page/main/popular-news/popular-news.component';
+import { LastNewsComponent } from './page/main/last-news/last-news.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import {TranslocoRootModule} from './transloco/transloco-root.module';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    NewsComponent
+    NewsComponent,
+    PopularNewsComponent,
+    LastNewsComponent
   ],
   imports: [
     BrowserModule,
