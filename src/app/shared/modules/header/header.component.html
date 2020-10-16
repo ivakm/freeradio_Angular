@@ -1,49 +1,50 @@
-<div *transloco="let t ">
-  <div class="header">
-    <div class="header__stream">
-      <div *ngIf="!musicPlay; else musicStop">
-        <mat-icon
-          (click)="musicStatus()"
-          class="stream__button">
-          play_circle_fill
-        </mat-icon>
-        <p class="stream__text">
-          Play Music
-        </p>
-      </div>
-      <ng-template #musicStop>
-        <mat-icon
-          (click)="musicStatus()"
-          class="stream__button">
-          pause
-        </mat-icon>
-        <p class="stream__text">
-          Stop Music
-        </p>
-      </ng-template>
+<div class="header">
+  <div class="header__stream">
+    <div *ngIf="!musicPlay; else musicStop">
+      <mat-icon
+        (click)="musicStatus()"
+        class="stream__button">
+        play_circle_fill
+      </mat-icon>
+      <p class="stream__text">
+        Play Music
+      </p>
     </div>
-
-    <div class="nav">
-      <a mat-button [routerLink]="'/'">{{t('menu.main')}}</a>
-      <a mat-button
-         [routerLink]="'/news'">{{t('menu.news')}}</a>
-
-      <a mat-button>{{t('menu.project')}}</a>
-
-      <a mat-button>{{t('menu.photo')}}</a>
-      <a mat-button>{{t('menu.about')}}</a>
-      <a mat-button>{{t('menu.team')}}</a>
-      <a mat-button>{{t('menu.contacts')}}</a>
-    </div>
-
-    <mat-form-field class="language" appearance="fill">
-      <mat-label>{{t('language')}}</mat-label>
-      <mat-select [value]="language[1]">
-        <mat-option *ngFor="let lang of language" [value]="lang">
-          {{lang}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-
+    <ng-template #musicStop>
+      <mat-icon
+        (click)="musicStatus()"
+        class="stream__button">
+        pause
+      </mat-icon>
+      <p class="stream__text">
+        Stop Music
+      </p>
+    </ng-template>
   </div>
+
+  <div class="nav">
+    <ng-container *transloco="let t; read: 'menu'">
+      <a mat-button [routerLink]="'/'">{{t('main')}}</a>
+      <a mat-button
+         [routerLink]="'/news'">{{t('news')}}</a>
+
+      <a mat-button>{{t('project')}}</a>
+
+      <a mat-button>{{t('photo')}}</a>
+      <a mat-button>{{t('about')}}</a>
+      <a mat-button>{{t('team')}}</a>
+      <a mat-button>{{t('contacts')}}</a>
+    </ng-container>
+  </div>
+
+  <mat-form-field class="language" appearance="fill">
+    <mat-label>{{'language' | transloco}}</mat-label>
+    <mat-select [value]="activeLang" (valueChange)="changeLangs($event)">
+      <mat-option *ngFor="let lang of language" [value]="lang">
+        {{lang}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
 </div>
+
