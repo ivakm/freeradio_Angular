@@ -6,7 +6,7 @@
   <div *ngFor="let news of newsArray"
        class="news__container border-bottom"
        [class.font-weight-bold]="news.isImportant">
-    <a [routerLink]="'/news' + news.link" class="news__text">{{news.text}}</a>
+    <a [routerLink]="'/news' + news.link" class="news__text">{{news.text[activeLang]}}</a>
     <p class="news__date">{{news.date}}</p>
   </div>
 </div>
