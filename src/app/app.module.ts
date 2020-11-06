@@ -20,7 +20,7 @@ import {NewsComponent} from './page/news/news.component';
 import {HttpClientModule} from '@angular/common/http';
 import {TranslocoRootModule} from './transloco/transloco-root.module';
 import { PopularNewsComponent } from './page/main/popular-news/popular-news.component';
-import { LastNewsComponent } from './page/main/last-news/last-news.component';
+import {LastNewsModule} from './shared/modules/last-news/last-news.module';
 
 @NgModule({
   declarations: [
@@ -29,8 +29,7 @@ import { LastNewsComponent } from './page/main/last-news/last-news.component';
     FooterComponent,
     MainComponent,
     NewsComponent,
-    PopularNewsComponent,
-    LastNewsComponent
+    PopularNewsComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +45,8 @@ import { LastNewsComponent } from './page/main/last-news/last-news.component';
     FormsModule,
     NgxAudioPlayerModule,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    LastNewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

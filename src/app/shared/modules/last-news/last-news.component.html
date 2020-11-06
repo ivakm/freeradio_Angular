@@ -3,7 +3,7 @@
   <ng-container *transloco="let t;">
     <h3 class="text-center">{{t('lastMenu.header')}}</h3>
   </ng-container>
-  <div *ngFor="let news of newsArray"
+  <div *ngFor="let news of choseArray"
        class="news__container border-bottom"
        [class.font-weight-bold]="news.isImportant">
     <a [routerLink]="'/news' + news.link" class="news__text">{{news.text[activeLang]}}</a>
