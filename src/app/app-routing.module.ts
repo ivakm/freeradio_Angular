@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
-import {MainComponent} from './page/main/main.component';
-import {NewsComponent} from './page/news/news.component';
+import {RouterModule, Routes} from '@angular/router';
+import {MainComponent} from '@page/main/main.component';
+import {NewsPageComponent} from '@page/news/news-page.component';
 
 
 const routes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'news', component: NewsComponent}
+  {path: 'news', component: NewsPageComponent}
 ];
 
 @NgModule({

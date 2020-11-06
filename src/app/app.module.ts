@@ -16,10 +16,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSelectModule} from '@angular/material/select';
 import {FormsModule} from '@angular/forms';
 import {NgxAudioPlayerModule} from 'ngx-audio-player';
-import {NewsComponent} from '@page/news/news.component';
+import {NewsPageComponent} from '@page/news/news-page.component';
 import {HttpClientModule} from '@angular/common/http';
 import {TranslocoRootModule} from './transloco/transloco-root.module';
-import { PopularNewsComponent } from '@page/main/popular-news/popular-news.component';
+import {PopularNewsComponent} from '@page/main/popular-news/popular-news.component';
 import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
 
 @NgModule({
@@ -28,7 +28,7 @@ import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    NewsComponent,
+    NewsPageComponent,
     PopularNewsComponent
   ],
   imports: [
