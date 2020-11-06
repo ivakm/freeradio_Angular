@@ -21,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {TranslocoRootModule} from './transloco/transloco-root.module';
 import {PopularNewsComponent} from '@page/main/popular-news/popular-news.component';
 import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
+import { SomeCompComponent } from './page/some-comp/some-comp.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
     FooterComponent,
     MainComponent,
     NewsPageComponent,
-    PopularNewsComponent
+    PopularNewsComponent,
+    SomeCompComponent
   ],
   imports: [
     BrowserModule,
