@@ -22,6 +22,7 @@ import {TranslocoRootModule} from './transloco/transloco-root.module';
 import {PopularNewsComponent} from '@page/main/popular-news/popular-news.component';
 import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
 import {NewsModule} from '@shared/modules/news/news.module';
+import {CarouselSharedModule} from '@shared/modules/carousel/carousel.module';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {NewsModule} from '@shared/modules/news/news.module';
     HttpClientModule,
     TranslocoRootModule,
     LastNewsModule,
-    NewsModule
+    NewsModule,
+    CarouselSharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
