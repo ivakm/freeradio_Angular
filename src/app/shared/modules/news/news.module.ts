@@ -6,6 +6,9 @@ import { NewsComponent } from './news.component';
 
 @NgModule({
   declarations: [NewsComponent],
+  exports: [
+    NewsComponent
+  ],
   imports: [
     CommonModule
   ]

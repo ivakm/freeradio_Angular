@@ -21,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {TranslocoRootModule} from './transloco/transloco-root.module';
 import {PopularNewsComponent} from '@page/main/popular-news/popular-news.component';
 import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
+import {NewsModule} from '@shared/modules/news/news.module';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
     NgxAudioPlayerModule,
     HttpClientModule,
     TranslocoRootModule,
-    LastNewsModule
+    LastNewsModule,
+    NewsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
