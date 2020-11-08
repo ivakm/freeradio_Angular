@@ -44,7 +44,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
       },
       src: 'https://freeradio.com.ua/wp-content/uploads/2020/10/photo_2020-10-26_09-53-39-768x576.jpg',
       url: 'url_1'
-    }, {
+    },
+    {
       id: 2,
       ua: {
         title: 'title 2 ua',
@@ -56,7 +57,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
       },
       src: 'https://freeradio.com.ua/wp-content/uploads/2020/10/RTS36YOC.jpg',
       url: 'url_2'
-    }, {
+    },
+    {
       id: 3,
       ua: {
         title: 'title 3 ua',
@@ -68,7 +70,21 @@ export class CarouselComponent implements OnInit, OnDestroy {
       },
       src: 'https://freeradio.com.ua/wp-content/uploads/2020/10/IMG_20190912_211039-768x576.jpg',
       url: 'url_3'
-    }];
+    },
+    {
+      id: 4,
+      ua: {
+        title: 'title 4 ua',
+        describe: 'describe 4 ua',
+      },
+      ru: {
+        title: 'title 4 ru',
+        describe: 'describe 4 ru',
+      },
+      src: 'https://freeradio.com.ua/wp-content/uploads/2020/10/svynky-768x509.jpg',
+      url: 'url_4'
+    }
+    ];
   private activeLang: string;
   private ngUnsubscribe = new Subject();
 
