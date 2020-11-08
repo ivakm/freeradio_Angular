@@ -6,7 +6,15 @@ import {NewsPageComponent} from '@page/news/news-page.component';
 
 const routes: Routes = [
   {path: '', component: MainComponent},
-  {path: 'news', component: NewsPageComponent}
+  {
+    path: 'news',
+    component: NewsPageComponent,
+    children: [
+      {path: '', component: NewsPageComponent},
+      // todo create a single news component
+      {path: ':id', component: NewsPageComponent}
+    ]
+  }
 ];
 
 @NgModule({

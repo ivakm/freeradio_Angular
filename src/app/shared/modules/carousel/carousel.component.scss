@@ -1,0 +1,36 @@
+.carousel__item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+
+    .item-text {
+      height: 100%;
+    }
+  }
+
+  .item-text {
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0;
+    color: rgb(255, 255, 255);
+    height: 50px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transition: all 0.5s ease-out;
+
+    .item-title {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      height: 50px;
+    }
+  }
+}

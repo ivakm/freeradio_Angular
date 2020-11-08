@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {CarouselComponent} from '@shared/modules/carousel/carousel.component';
 import {CarouselModule} from 'ngx-owl-carousel-o';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [CarouselComponent],
@@ -10,7 +11,8 @@ import {CarouselModule} from 'ngx-owl-carousel-o';
   ],
   imports: [
     CommonModule,
-    CarouselModule
+    CarouselModule,
+    RouterModule
   ]
 })
 export class CarouselSharedModule { }
