@@ -11,5 +11,8 @@
   "language": "Мова",
   "lastMenu": {
     "header": "Останні новини"
+  },
+  "main-page": {
+    "popular-news": "Популярні новини"
   }
 }

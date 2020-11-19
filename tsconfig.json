@@ -5,7 +5,8 @@
     "paths": {
       "@page/*": ["src/app/page/*"],
       "@shared/*": ["src/app/shared/*"],
-      "@style/*": ["src/app/style/*"]
+      "@style/*": ["src/app/style/*"],
+      "@assets/*": ["src/assets/*"]
     },
     "outDir": "./dist/out-tsc",
     "sourceMap": true,

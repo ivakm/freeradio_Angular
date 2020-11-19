@@ -11,5 +11,8 @@
   "language": "Язык",
   "lastMenu": {
     "header": "Последние новости"
+  },
+  "main-page": {
+    "popular-news": "Популярные новости"
   }
 }

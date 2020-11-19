@@ -1,2 +1,4 @@
-<p>popular-news works!</p>
+<ng-container *transloco="let t; read: 'main-page'">
+  <h2 class="text-center text-danger">{{t('popular-news') | uppercase}}</h2>
+</ng-container>
 <app-carousel></app-carousel>
