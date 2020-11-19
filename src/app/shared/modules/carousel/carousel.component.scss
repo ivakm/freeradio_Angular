@@ -11,12 +11,12 @@
     cursor: pointer;
     filter: grayscale(0);
 
-    .item-text {
+    .item__text {
       height: 100%;
     }
   }
 
-  .item-text {
+  .item__text {
     background: rgba(0, 0, 0, 0.6);
     bottom: 0;
     color: rgb(255, 255, 255);
@@ -26,7 +26,7 @@
     right: 0;
     transition: all 0.5s ease-out;
 
-    .item-title {
+    .item__title {
       align-items: center;
       display: flex;
       justify-content: center;
