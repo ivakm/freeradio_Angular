@@ -7,7 +7,7 @@
           [ngStyle]="{'background-image': 'url(' + slide.src + ')'}">
           <a class="item-text" [routerLink]="['news', slide.url]">
             <div class="item-title">{{slide[activeLang].title}}</div>
-            <div class="item describe">{{slide[activeLang].describe}}</div>
+            <div class="item-describe">{{slide[activeLang].describe}}</div>
           </a>
         </div>
       </ng-template>
