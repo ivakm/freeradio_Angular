@@ -1,9 +1,7 @@
-import {Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {Subject} from 'rxjs';
 import {TranslocoService} from '@ngneat/transloco';
-import {takeUntil} from 'rxjs/operators';
 import {LastNewsService} from '../../services/last-news.service';
-import {log} from 'util';
 import {iLastNews} from '../../interfaces/last-news.model';
 
 const newsArray = [
@@ -24,7 +22,7 @@ const newsArray = [
     date: '2020-10-16 15:20',
     link: 'news-link2'
   }];
-const covidArray = [ {
+const covidArray = [{
   text: {
     ua: 'Від Ковіду сьогодні померло 9000 людей',
     ru: 'От Ковид сегодня умерло 9000 человек'
@@ -39,8 +37,8 @@ const covidArray = [ {
   templateUrl: './last-news.component.html',
   styleUrls: ['./last-news.component.scss']
 })
-export class LastNewsComponent implements OnInit, OnDestroy, OnChanges {
-  @Input() setNewsType;
+export class LastNewsComponent implements OnInit, OnDestroy {
+  @Input() setNewsType: string;
 
   private ngUnsubscribe = new Subject();
   private activeLang: string;
@@ -51,22 +49,17 @@ export class LastNewsComponent implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnInit() {
-   this.choseArray = this.getNewsArray(this.setNewsType);
-   this.translocoService.langChanges$.subscribe(res => {
+    this.choseArray = this.getNewsArray(this.setNewsType);
+    this.translocoService.langChanges$.subscribe(res => {
       this.activeLang = res;
     });
 
-
-  /*  this.lastNews.getLastNews()
-      .pipe(
-        takeUntil(this.ngUnsubscribe)
-      ).subscribe(res => {
-      // some action
-    });*/
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
+    /*  this.lastNews.getLastNews()
+        .pipe(
+          takeUntil(this.ngUnsubscribe)
+        ).subscribe(res => {
+        // some action
+      });*/
   }
 
   ngOnDestroy() {
@@ -74,7 +67,27 @@ export class LastNewsComponent implements OnInit, OnDestroy, OnChanges {
     this.ngUnsubscribe.complete();
   }
 
+
+  get ActiveLanguage() {
+    return this.activeLang;
+  }
+
   getNewsArray(name): iLastNews[] {
+    /*
+    const availableArray = {
+      newsArray: {
+      url: `newsUrl`
+      },
+      covidArray: {
+      url: `covidUrl`
+      }
+
+      this.lastNews.get(availableArray[name].url, {
+      language: this.getActiveLanguage
+      })
+    };
+
+    **/
     const availableArray = {
       newsArray,
       covidArray
