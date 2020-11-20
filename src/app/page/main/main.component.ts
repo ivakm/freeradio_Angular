@@ -8,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   setMainNews = 5;
+  newsType = {
+    ru: 'Донецк',
+    ua: 'Донецьк'
+  };
 
   constructor() { }
 

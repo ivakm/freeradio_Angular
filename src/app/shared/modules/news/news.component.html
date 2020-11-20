@@ -1,3 +1,12 @@
 <ng-container *transloco="let t; read: 'news-page'">
-  <h2 class="text-center text-danger">{{(t('news-header') + header) | uppercase}}</h2>
+  <h2 class="text-center text-danger news__header">
+    <span>
+    {{(t('news-header') + header) | uppercase}}
+    </span>
+  </h2>
+  <div class="news__container">
+    <ng-container *ngIf="hasMainNews">
+      <app-main-news></app-main-news>
+    </ng-container>
+  </div>
 </ng-container>

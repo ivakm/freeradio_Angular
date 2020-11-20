@@ -9,11 +9,9 @@ import {takeUntil} from 'rxjs/operators';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit, OnDestroy {
-  @Input() newsCount: number;
-  @Input() addToHeader = {
-    ru: 'Донецк',
-    ua: 'Донецьк'
-  };
+  @Input() newsCount: number = 4;
+  @Input() addToHeader;
+  @Input() hasMainNews: boolean = false;
 
   header: string;
   ngUnsubscribe = new Subject();
@@ -25,7 +23,7 @@ export class NewsComponent implements OnInit, OnDestroy {
     this.translate.langChanges$
       .pipe(takeUntil(this.ngUnsubscribe))
       .subscribe(res => {
-        !!this.addToHeader ? this.header = `: ${this.addToHeader[res]}` : '';
+        !!this.addToHeader ? this.header = `: ${this.addToHeader[res]}` : this.header = '';
       });
   }
 
