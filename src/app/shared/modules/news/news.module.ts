@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NewsComponent } from './news.component';
+import {TranslocoModule} from '@ngneat/transloco';
 
 
 
@@ -9,8 +10,9 @@ import { NewsComponent } from './news.component';
   exports: [
     NewsComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        TranslocoModule
+    ]
 })
 export class NewsModule { }

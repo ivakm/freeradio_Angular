@@ -14,5 +14,8 @@
   },
   "main-page": {
     "popular-news": "Популярні новини"
+  },
+  "news-page": {
+    "news-header": "Новини"
   }
 }
