@@ -9,8 +9,10 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class MainNewsComponent implements OnInit {
 
   @Input() data;
+  @Input() hasMainNews = false;
 
-  constructor(private router: Router, private route: ActivatedRoute) { }
+  constructor(private router: Router, private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
   }

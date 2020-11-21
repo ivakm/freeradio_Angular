@@ -1,17 +1,27 @@
-<div class="main-news__container" (click)="refToPost()">
-  <div class="picture__container">
-    <img src="{{data.image}}" alt="main-news pictures">
+<div class="main-news__container p-2 mb-4" (click)="refToPost()">
+  <div class="single-news--top">
+    <div class="picture__container col-5 pr-2 m-0">
+      <img src="{{data.image}}" alt="main pictures" class="picture__img">
+    </div>
+    <div class="info__container col-7 p-0 m-0">
+      <div class="news__header">
+        <ng-container *ngIf="hasMainNews; else dontMainNews">
+          <h2>{{data.header | uppercase}}</h2>
+        </ng-container>
+
+        <ng-template #dontMainNews>
+          <h6>{{data.header | uppercase}}</h6>
+        </ng-template>
+      </div>
+      <div class="news__author font-weight-bold">
+        <span>{{data.author}}</span>
+      </div>
+      <div class="news__date">
+        <span>{{data.date | date: 'yyyy-MM-dd hh:mm'}}</span>
+      </div>
+    </div>
   </div>
-  <div class="info__container">
-    <div class="news__header">
-      <h2>{{data.header | uppercase}}</h2>
-    </div>
-    <div class="news__author font-weight-bold">
-      <span>{{data.author}}</span>
-    </div>
-    <div class="news__date">
-      <span>{{data.date | date: 'yyyy-MM-dd hh:mm'}}</span>
-    </div>
+  <div class="single-news__bottom">
     <div class="news__title">
       <p>{{data.title | truncateText: 200}}</p>
     </div>
@@ -20,3 +30,4 @@
     </ng-container>
   </div>
 </div>
+

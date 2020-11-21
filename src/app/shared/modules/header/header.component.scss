@@ -1,6 +1,8 @@
+@import 'src/assets/styles/variables';
+
 .header {
   align-items: center;
-  background-color: rgb(255, 255, 25);
+  background-color: $mainSiteBg;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;

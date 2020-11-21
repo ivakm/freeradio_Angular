@@ -1,12 +1,6 @@
-.news__header {
-  width: 100%;
-  text-align: center;
-  border-bottom: 2px solid #000;
-  line-height: 0;
-  margin: 10px 0 20px;
+@import 'src/assets/styles/common';
 
-  span {
-    background: #ffffff;
-    padding: 0 10px;
-  }
+.news__container {
+  display: flex;
+  flex-wrap: wrap;
 }
