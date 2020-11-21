@@ -2,6 +2,7 @@ import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {TranslocoService} from '@ngneat/transloco';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
+import {iNews} from '@shared/interfaces/news.model';
 
 @Component({
   selector: 'app-news',
@@ -15,7 +16,7 @@ export class NewsComponent implements OnInit, OnDestroy {
 
   header: string;
   ngUnsubscribe = new Subject();
-  some = {
+  some: iNews[] = [{
     url: 'news',
     image: 'assets/images/Stanytsia-Luhanska.jpg',
     header: 'Ситуація на КПВВ: в суботу через лінію розмежування можна пройти лише через "Станицю Луганську"',
@@ -23,7 +24,39 @@ export class NewsComponent implements OnInit, OnDestroy {
     author: 'Наталя Жукова',
     title: `21 листопада фактично працює на пропуск громадян лише один контрольний пункт в’їзду-виїзду.
        До 11-ї ранку тут вже пройшли майже 400 людей. Хоча з українського боку відкриті всі КПВВ. `
-  };
+  }, {
+    url: 'news',
+    image: 'assets/images/Stanytsia-Luhanska.jpg',
+    header: 'Ситуація на КПВВ: в суботу через лінію розмежування можна пройти лише через "Станицю Луганську"',
+    date: new Date(),
+    author: 'Наталя Жукова',
+    title: `21 листопада фактично працює на пропуск громадян лише один контрольний пункт в’їзду-виїзду.
+       До 11-ї ранку тут вже пройшли майже 400 людей. Хоча з українського боку відкриті всі КПВВ. `
+  }, {
+    url: 'news',
+    image: 'assets/images/Stanytsia-Luhanska.jpg',
+    header: 'Ситуація на КПВВ: в суботу через лінію розмежування можна пройти лише через "Станицю Луганську"',
+    date: new Date(),
+    author: 'Наталя Жукова',
+    title: `21 листопада фактично працює на пропуск громадян лише один контрольний пункт в’їзду-виїзду.
+       До 11-ї ранку тут вже пройшли майже 400 людей. Хоча з українського боку відкриті всі КПВВ. `
+  }, {
+    url: 'news',
+    image: 'assets/images/Stanytsia-Luhanska.jpg',
+    header: 'Ситуація на КПВВ: в суботу через лінію розмежування можна пройти лише через "Станицю Луганську"',
+    date: new Date(),
+    author: 'Наталя Жукова',
+    title: `21 листопада фактично працює на пропуск громадян лише один контрольний пункт в’їзду-виїзду.
+       До 11-ї ранку тут вже пройшли майже 400 людей. Хоча з українського боку відкриті всі КПВВ. `
+  }, {
+    url: 'news',
+    image: 'assets/images/Stanytsia-Luhanska.jpg',
+    header: 'Ситуація на КПВВ: в суботу через лінію розмежування можна пройти лише через "Станицю Луганську"',
+    date: new Date(),
+    author: 'Наталя Жукова',
+    title: `21 листопада фактично працює на пропуск громадян лише один контрольний пункт в’їзду-виїзду.
+       До 11-ї ранку тут вже пройшли майже 400 людей. Хоча з українського боку відкриті всі КПВВ. `
+  }];
 
   constructor(private translate: TranslocoService) {
   }

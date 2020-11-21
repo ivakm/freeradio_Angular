@@ -16,7 +16,8 @@
     "popular-news": "Популярні новини"
   },
   "news-page": {
-    "news-header": "Новини"
+    "news-header": "Новини",
+    "look-all-news": "Дивитися всі новини"
   },
   "read-more": "Читати далі"
 }
