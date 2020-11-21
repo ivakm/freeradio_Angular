@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-main-news',
@@ -15,6 +16,7 @@ export class MainNewsComponent implements OnInit {
   }
 
   ngOnInit() {
+    AOS.init();
   }
 
   refToPost() {
