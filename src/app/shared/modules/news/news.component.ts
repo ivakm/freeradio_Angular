@@ -9,12 +9,21 @@ import {takeUntil} from 'rxjs/operators';
   styleUrls: ['./news.component.scss']
 })
 export class NewsComponent implements OnInit, OnDestroy {
-  @Input() newsCount: number = 4;
+  @Input() newsCount = 4;
   @Input() addToHeader;
-  @Input() hasMainNews: boolean = false;
+  @Input() hasMainNews = false;
 
   header: string;
   ngUnsubscribe = new Subject();
+  some = {
+    url: 'news',
+    image: 'assets/images/Stanytsia-Luhanska.jpg',
+    header: 'Ситуація на КПВВ: в суботу через лінію розмежування можна пройти лише через "Станицю Луганську"',
+    date: new Date(),
+    author: 'Наталя Жукова',
+    title: `21 листопада фактично працює на пропуск громадян лише один контрольний пункт в’їзду-виїзду.
+       До 11-ї ранку тут вже пройшли майже 400 людей. Хоча з українського боку відкриті всі КПВВ. `
+  };
 
   constructor(private translate: TranslocoService) {
   }

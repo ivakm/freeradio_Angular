@@ -6,7 +6,7 @@
   </h2>
   <div class="news__container">
     <ng-container *ngIf="hasMainNews">
-      <app-main-news></app-main-news>
+      <app-main-news [data]="some"></app-main-news>
     </ng-container>
   </div>
 </ng-container>

@@ -6,7 +6,7 @@ export const customOptions: OwlOptions = {
   touchDrag: true,
   pullDrag: true,
   autoplay: true,
-  dots: true,
+  dots: false,
   navSpeed: 700,
   margin: 10,
   animateIn: true,

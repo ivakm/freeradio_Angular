@@ -1,0 +1,46 @@
+@import 'src/assets/styles/variables';
+
+.main-news__container {
+  background: transparent;
+  padding: 20px;
+  transition: 0.5s linear;
+
+  .picture__container {
+    float: left;
+    margin-right: 20px;
+    overflow: hidden;
+    width: 45%;
+
+    img {
+      filter: grayscale(100%);
+      height: auto;
+      transition: 0.5s linear;
+      width: 100%;
+    }
+  }
+
+  .info__container {
+    .news__header {
+      transition: 0.5s linear;
+    }
+  }
+
+  &:hover {
+    background: $hoverNewsColor;
+    cursor: pointer;
+    transition: 0.5s linear;
+
+    .picture__container {
+      img {
+        filter: unset;
+        transform: scale(1.01);
+      }
+    }
+
+    .news__header {
+      color: $redColor;
+      transition: 0.5s linear;
+    }
+  }
+
+}

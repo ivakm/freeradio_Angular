@@ -1,1 +1,19 @@
-<div>some some some some</div>
+<div class="main-news__container" (click)="refToPost()">
+  <div class="picture__container">
+    <img src="{{data.image}}" alt="main-news pictures">
+  </div>
+  <div class="info__container">
+    <div class="news__header">
+      <h2>{{data.header | uppercase}}</h2>
+    </div>
+    <div class="news__author font-weight-bold">
+      <span>{{data.author}}</span>
+    </div>
+    <div class="news__date">
+      <span>{{data.date | date: 'yyyy-MM-dd hh:mm'}}</span>
+    </div>
+    <div class="news__title">
+      <p>{{data.title | truncateText: 200}}</p>
+    </div>
+  </div>
+</div>
