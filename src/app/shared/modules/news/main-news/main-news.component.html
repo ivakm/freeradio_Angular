@@ -15,5 +15,8 @@
     <div class="news__title">
       <p>{{data.title | truncateText: 200}}</p>
     </div>
+    <ng-container *transloco="let t">
+      <a [routerLink]="data.url" class="news__link">{{t('read-more')}}</a>
+    </ng-container>
   </div>
 </div>

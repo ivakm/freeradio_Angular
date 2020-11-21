@@ -4,6 +4,7 @@ import {NewsComponent} from './news.component';
 import {TranslocoModule} from '@ngneat/transloco';
 import {MainNewsComponent} from './main-news/main-news.component';
 import {TruncateTextPipe} from '@shared/pipes/truncate-text.pipe';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {TruncateTextPipe} from '@shared/pipes/truncate-text.pipe';
   ],
   imports: [
     CommonModule,
-    TranslocoModule
+    TranslocoModule,
+    RouterModule
   ]
 })
 export class NewsModule {

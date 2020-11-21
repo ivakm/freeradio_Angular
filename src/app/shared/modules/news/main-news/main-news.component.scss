@@ -20,6 +20,7 @@
   }
 
   .info__container {
+    padding-bottom: 10px;
     .news__header {
       transition: 0.5s linear;
     }
@@ -43,4 +44,8 @@
     }
   }
 
+}
+
+.news__link {
+  float: right;
 }
