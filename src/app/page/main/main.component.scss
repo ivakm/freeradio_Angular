@@ -1,3 +1,81 @@
+@import 'src/assets/styles/common';
+@import 'src/assets/styles/variables';
+
 .main__container {
   display: flex;
+}
+
+.carousel__item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(1);
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+
+  &:hover {
+    cursor: pointer;
+    filter: grayscale(0);
+
+    .item__describe {
+      background: $redColor;
+      transition: all 0.5s ease-out;
+    }
+
+    .item__text {
+      height: 100%;
+    }
+  }
+}
+
+.item__text {
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  color: rgb(255, 255, 255);
+  height: 50px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.item__title {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+}
+
+.item__describe {
+  background: #2d2d2d;
+  bottom: 1%;
+  color: white;
+  left: 50%;
+  padding: 10px;
+  position: absolute;
+  transform: translateX(-50%);
+  transition: all 0.5s ease-in-out;
+}
+
+.slider ::ng-deep .owl-prev {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 20px;
+  padding-right: 30px;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-55%);
+
+}
+
+.slider ::ng-deep .owl-next {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  left: unset;
+  right: -5px;
+  padding: 20px;
+  padding-left: 30px;
+  top: 50%;
+  transform: translateY(-55%);
 }

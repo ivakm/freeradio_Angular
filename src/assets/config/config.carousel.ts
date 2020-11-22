@@ -19,3 +19,20 @@ export const customOptions: OwlOptions = {
   },
   nav: true
 };
+
+export const projectInMain: OwlOptions = {
+  loop: true,
+  autoplay: true,
+  dots: false,
+  navSpeed: 700,
+  margin: 10,
+  animateIn: 'fadeIn',
+  animateOut: 'fadeOut',
+  navText: ['&#8592;', '&#8594;'],
+  responsive: {
+    0: {
+      items: 1
+    }
+  },
+  nav: true
+};

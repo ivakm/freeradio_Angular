@@ -4,8 +4,30 @@
       <app-popular-news></app-popular-news>
     </div>
 
-    <div class="news">
+    <div class="news mb-5">
       <app-news [newsCount]="setMainNews" [addToHeader]="newsType" [hasMainNews]="true"></app-news>
+    </div>
+
+    <div class="project">
+      <ng-container *transloco="let t">
+        <h2 class="text-center text-danger header-name">
+          <span>
+            {{t('project-header') | uppercase}}
+           </span>
+        </h2>
+      </ng-container>
+      <owl-carousel-o [options]="customOptions" class="slider">
+        <ng-container *ngFor="let slide of slidesStore">
+          <ng-template carouselSlide>
+            <div
+              class="carousel__item"
+              [ngStyle]="{'background-image': 'url(' + slide.img + ')'}">
+              <div class="item__describe">{{slide.text[activeLang] | uppercase}}</div>
+            </div>
+          </ng-template>
+
+        </ng-container>
+      </owl-carousel-o>
     </div>
   </div>
   <div class="sidebar col-3">

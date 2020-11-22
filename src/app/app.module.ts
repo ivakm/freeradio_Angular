@@ -23,6 +23,7 @@ import {PopularNewsComponent} from '@page/main/popular-news/popular-news.compone
 import {LastNewsModule} from '@shared/modules/last-news/last-news.module';
 import {NewsModule} from '@shared/modules/news/news.module';
 import {CarouselSharedModule} from '@shared/modules/carousel/carousel.module';
+import {CarouselModule} from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -33,25 +34,26 @@ import {CarouselSharedModule} from '@shared/modules/carousel/carousel.module';
     NewsPageComponent,
     PopularNewsComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatSidenavModule,
-    MatListModule,
-    MatButtonModule,
-    MatIconModule,
-    MatMenuModule,
-    MatSelectModule,
-    FormsModule,
-    NgxAudioPlayerModule,
-    HttpClientModule,
-    TranslocoRootModule,
-    LastNewsModule,
-    NewsModule,
-    CarouselSharedModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatSidenavModule,
+        MatListModule,
+        MatButtonModule,
+        MatIconModule,
+        MatMenuModule,
+        MatSelectModule,
+        FormsModule,
+        NgxAudioPlayerModule,
+        HttpClientModule,
+        TranslocoRootModule,
+        LastNewsModule,
+        NewsModule,
+        CarouselSharedModule,
+        CarouselModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
